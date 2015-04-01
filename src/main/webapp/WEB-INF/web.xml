@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+
+	<display-name>Archetype Created Web Application</display-name>
+	<servlet>
+		<servlet-name>simple</servlet-name>
+		<servlet-class>org.akash.mavenbook.SimpleServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>simple</servlet-name>
+		<url-pattern>/simple</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>firstServlet</servlet-name>
+		<servlet-class>com.akash.servlet.FirstServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>firstServlet</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>jspServlet</servlet-name>
+		<jsp-file>jspServlet.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>jspServlet</servlet-name>
+		<url-pattern>/jspServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>secondServlet</servlet-name>
+		<servlet-class>com.akash.servlet.SecondServlet</servlet-class>
+		<init-param>
+			<param-name>name</param-name>
+			<param-value>basanti</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>secondServlet</servlet-name>
+		<url-pattern>/hello</url-pattern>
+	</servlet-mapping>
+	<context-param>
+		<param-name>name</param-name>
+		<param-value>obama</param-value>
+	</context-param>
+
+	<filter>
+		<filter-name>GzipFilter</filter-name>
+		<filter-class>com.akash.servlet.gzip.GZipServletFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>GzipFilter</filter-name>
+		<url-pattern>*.js</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>GzipFilter</filter-name>
+		<url-pattern>*.css</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>GzipFilter</filter-name>
+		<url-pattern>*.html</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>GzipFilter</filter-name>
+		<url-pattern>*.jsp</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>GzipFilter</filter-name>
+		<url-pattern>/</url-pattern>
+	</filter-mapping>
+
+</web-app>
