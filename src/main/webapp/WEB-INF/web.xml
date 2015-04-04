@@ -27,12 +27,12 @@
 	</servlet-mapping>
 	
 	<servlet>
-		<servlet-name>jspServlet</servlet-name>
-		<jsp-file>jspServlet.jsp</jsp-file>
+		<servlet-name>myjspurl</servlet-name>
+		<jsp-file>/WEB-INF/jsp/jspServlet.jsp</jsp-file>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>jspServlet</servlet-name>
-		<url-pattern>/jspServlet</url-pattern>
+		<servlet-name>myjspurl</servlet-name>
+		<url-pattern>/myjspurl</url-pattern>
 	</servlet-mapping>
 
 	<servlet>
