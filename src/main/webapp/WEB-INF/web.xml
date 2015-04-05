@@ -15,7 +15,24 @@
 		<servlet-name>simple</servlet-name>
 		<url-pattern>/simple</url-pattern>
 	</servlet-mapping>
+	
+	<!-- Soap based web services JAX-WS starts here-->
+	<listener>
+		<listener-class>
+		com.sun.xml.ws.transport.http.servlet.WSServletContextListener
+		</listener-class>
+	</listener>
 
+	<servlet>
+		<servlet-name>jaxws</servlet-name>
+		<servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>jaxws</servlet-name>
+		<url-pattern>/*</url-pattern>
+	</servlet-mapping>
+	<!-- Soap based web services JAX-WS ends here-->
 
 	<servlet>
 		<servlet-name>firstServlet</servlet-name>
@@ -23,9 +40,9 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>firstServlet</servlet-name>
-		<url-pattern>/</url-pattern>
+		<url-pattern>/first</url-pattern>
 	</servlet-mapping>
-	
+		
 	<servlet>
 		<servlet-name>myjspurl</servlet-name>
 		<jsp-file>/WEB-INF/jsp/jspServlet.jsp</jsp-file>
