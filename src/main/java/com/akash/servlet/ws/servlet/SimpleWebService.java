@@ -1,4 +1,4 @@
-package com.akash.servlet.ws;
+package com.akash.servlet.ws.servlet;
 
 import java.beans.XMLEncoder;
 import java.io.ByteArrayOutputStream;
@@ -18,6 +18,11 @@ public class SimpleWebService extends HttpServlet {
 
 	private static final long serialVersionUID = 100L;
 
+	/**
+	 * xml response : http://localhost/simplews
+	 * 
+	 * json response : http://localhost/simplews?format=json
+	 */
 	protected void doGet(HttpServletRequest req, HttpServletResponse res)
 			throws IOException {
 
@@ -65,3 +70,43 @@ public class SimpleWebService extends HttpServlet {
 		return user;
 	}
 }
+
+
+/**
+ * xml response 
+ *
+	<java version="1.7.0_40" class="java.beans.XMLDecoder">
+		<object class="com.akash.servlet.ws.servlet.User">
+			<void property="city">
+				<string>new york</string>
+			</void>
+			<void property="name">
+				<string>ashok</string>
+			</void>
+		</object>
+	</java>
+ *
+ */
+
+/**
+ *JSON response
+ *  
+ {"java": {
+   "class": "java.beans.XMLDecoder",
+   "object": {
+      "class": "com.akash.servlet.ws.servlet.User",
+      "void": [
+         {
+            "property": "city",
+            "string": "new york"
+         },
+         {
+            "property": "name",
+            "string": "ashok"
+         }
+      ]
+   },
+   "version": "1.7.0_40"
+}}
+ *
+ */

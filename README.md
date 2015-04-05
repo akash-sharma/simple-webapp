@@ -33,8 +33,3 @@ mvn archetype:generate -DgroupId=org.akash.mavenbook -DartifactId=simple-core -D
 ===============================================
 
 
-RequestDispatcher => include() and forward()
-
-sendRedirect()
-
-(Q) How context path is defined?

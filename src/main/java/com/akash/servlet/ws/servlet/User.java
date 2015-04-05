@@ -1,4 +1,4 @@
-package com.akash.servlet.ws;
+package com.akash.servlet.ws.servlet;
 
 import java.io.Serializable;
 
