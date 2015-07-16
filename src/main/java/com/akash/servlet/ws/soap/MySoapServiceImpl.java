@@ -39,4 +39,6 @@ public class MySoapServiceImpl {
  * wsgen -verbose -keep -cp . com.akash.servlet.ws.soap.MySoapServiceImpl
  * 
  * (3)Copy java files from javax package to src/main/java folder
+ * 
+ * Step (2) and (3) are implemented itself by using endpoint publisher.
  */
